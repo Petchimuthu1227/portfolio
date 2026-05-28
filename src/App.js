@@ -334,6 +334,7 @@ export default function App() {
     message: "",
   });
   const [sending, setSending] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [formMsg, setFormMsg] = useState(null);
   const formRef = useRef(null);
 
@@ -432,38 +433,47 @@ export default function App() {
         <a href="#hero" className="pf-logo">
           Portfolio
         </a>
-        <ul className="pf-nav-links">
+
+        {/* Hamburger Button */}
+        <div className="pf-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
+        </div>
+
+        <ul className={`pf-nav-links ${menuOpen ? "active" : ""}`}>
           <li>
             <a href="#about">About</a>
           </li>
+
           <li>
             <a href="#skills">Skills</a>
           </li>
+
           <li>
             <a href="#projects">Projects</a>
           </li>
+
           <li>
             <a
               href={GITHUB_URL}
               target="_blank"
               rel="noreferrer"
               className="pf-nav-icon"
-              aria-label="GitHub"
             >
               <GithubIcon />
             </a>
           </li>
+
           <li>
             <a
               href={LINKEDIN_URL}
               target="_blank"
               rel="noreferrer"
               className="pf-nav-icon"
-              aria-label="LinkedIn"
             >
               <LinkedinIcon />
             </a>
           </li>
+
           <li>
             <a href="#contact" className="pf-nav-cta">
               Hire Me
