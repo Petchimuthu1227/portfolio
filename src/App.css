@@ -1356,3 +1356,98 @@ body::before {
     flex-direction: column;
   }
 }
+/* =========================
+MOBILE RESPONSIVE NAVBAR
+========================= */
+
+@media (max-width: 768px) {
+  .pf-nav {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pf-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .pf-nav-links li {
+    list-style: none;
+  }
+
+  .pf-nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .pf-logo {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .pf-nav-cta {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* HERO SECTION */
+  .pf-hero {
+    padding: 7rem 1rem 4rem;
+    text-align: center;
+  }
+
+  .pf-hero-h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .pf-role {
+    font-size: 1rem;
+  }
+
+  .pf-hero-sub {
+    font-size: 1rem;
+  }
+
+  .pf-hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .pf-hero-socials {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  /* PROJECT GRID */
+  .pf-proj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ABOUT GRID */
+  .pf-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  .pf-contact-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  /* SECTION TITLES */
+  .pf-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .pf-about-p,
+  .pf-contact-info-p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
